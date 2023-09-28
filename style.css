@@ -1,0 +1,153 @@
+:root {
+  --green: #22c55e;
+  --red: #ef4444;
+  --white: #e2e8f0;
+  --white-2: #94a3b8;
+  --bg: #0f172a;
+  --bg-2: #1e293b;
+  --outline: #475569;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'consolas';
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--white-2);
+  line-height: calc(1em + 0.5rem);
+  /* outline: 1px solid red; */
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  background-color: var(--bg);
+  display: grid;
+  place-items: center;
+}
+button,
+input[type='button'] {
+  background-color: transparent;
+  border: none;
+  display: block;
+  cursor: pointer;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  user-select: none;
+  opacity: 0;
+}
+.container {
+  padding: 3rem;
+  border: 0.1rem solid var(--outline);
+  position: relative;
+}
+.container h1 {
+  text-align: center;
+  font-weight: 700;
+}
+.boxes-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-inline: auto;
+  width: min-content;
+}
+.boxes-wrapper div {
+  background-color: var(--bg-2);
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 4.6rem;
+}
+.boxes-wrapper div p {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.message-wrapper {
+  margin-inline: auto;
+  margin-top: 5rem;
+}
+.message-wrapper p {
+  text-align: center;
+}
+.input-display {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.message {
+  font-weight: 700;
+  color: var(--red);
+}
+.hint {
+  margin-top: 5rem;
+  max-width: 30ch;
+}
+.wrong-letters-wrapper {
+  background-color: var(--bg-2);
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.reset-button {
+  margin-top: 2rem;
+  width: 100%;
+  padding-block: 1rem;
+  font-weight: 700;
+  border: 0.1rem solid var(--outline);
+}
+.reset-button:hover {
+  background-color: var(--outline);
+  color: var(--white);
+}
+.reset-button:active {
+  transform: scale(0.98);
+}
+.reset-button:focus {
+  background-color: var(--outline);
+  color: var(--white);
+}
+.display {
+  display: block;
+}
+:focus {
+  outline: none;
+}
